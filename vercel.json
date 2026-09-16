@@ -1,10 +1,10 @@
 {
   "builds": [
-    { "src": "api2/index.ts", "use": "@vercel/node" },
+    { "src": "api3/index.ts", "use": "@vercel/node" },
     { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api2/index.ts" },
+    { "src": "/api/(.*)", "dest": "/api3/index.ts" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
